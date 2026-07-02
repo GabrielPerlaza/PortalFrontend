@@ -1,0 +1,70 @@
+<form (ngSubmit)="guardarArticulo()">
+<div class="container mt-4">
+
+    <h2>
+        Artículo
+    </h2>
+
+    <hr>
+
+    <div class="mb-3">
+
+        <label>Título</label>
+
+        <input
+            type="text"
+            [(ngModel)]="articulo.titulo"
+            name="titulo"
+            class="form-control">
+
+    </div>
+
+    <div class="mb-3">
+
+        <label>Resumen</label>
+
+        <textarea
+            class="form-control"
+            [(ngModel)]="articulo.resumen"
+            name="resumen">
+        </textarea>
+
+    </div>
+
+   
+    <div class="mb-3">
+
+        <label>Contenido</label>
+
+        <textarea
+            rows="10"
+            class="form-control"
+            [(ngModel)]="articulo.contenido"
+            name="contenido">
+        </textarea>
+
+    </div>
+
+    <div class="mb-3">
+    <label>Imagen de portada</label>
+    <input 
+        type="file" 
+        (change)="onArchivoSeleccionado($event)"
+        accept="image/*"
+        class="form-control">
+
+    @if (articulo.imagenPortada) {
+        <img [src]="articulo.imagenPortada" class="img-fluid mt-2" style="max-height: 200px;">
+    }
+</div>
+
+    <button
+        class="btn btn-primary"
+        type="submit">     
+        Guardar
+
+    </button>
+
+</div>
+</form>
+

@@ -1,0 +1,34 @@
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+<form (ngSubmit)="iniciarSesion()">
+    <div class="card shadow p-4" style="width:400px">
+
+        <h3 class="text-center mb-4">
+            Portal de Artículos
+        </h3>
+
+        <div class="mb-3">
+            <label>Correo</label>
+            <input
+                type="email"
+                 [(ngModel)]="modelo.correo"
+                 name="correo"
+                class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Contraseña</label>
+            <input
+                type="password"
+                [(ngModel)]="modelo.clave"
+                name="clave"
+                class="form-control">
+        </div>
+
+        <button  type="submit"
+            class="btn btn-primary w-100">
+            Iniciar Sesión
+        </button>
+
+    </div>
+</form>
+</div>
