@@ -1,27 +1,139 @@
-# PortalFrontend
+#  Portal Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
+Frontend desarrollado en **Angular** para la administración de artículos de un portal web. La aplicación permite gestionar el contenido mediante una interfaz moderna, intuitiva y responsiva, consumiendo una API REST desarrollada en **ASP.NET Core**.
 
-## Development server
+##  Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este proyecto corresponde al cliente web del Portal de Administración, donde los usuarios autenticados pueden crear, editar, visualizar y eliminar artículos de forma sencilla.
 
-## Code scaffolding
+El sistema consume una API REST para la gestión de la información y utiliza **Cloudinary** para el almacenamiento de imágenes de portada.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+##  Tecnologías utilizadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular 22
+- TypeScript
+- RxJS
+- Bootstrap 5
+- HTML5
+- CSS3
+- SweetAlert2
+- Cloudinary
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##  Características
 
-## Running end-to-end tests
+- Inicio de sesión de usuarios.
+- Gestión completa de artículos (CRUD).
+- Visualización previa de artículos mediante modal.
+- Carga de imágenes hacia Cloudinary.
+- Consumo de API REST.
+- Interfaz responsiva.
+- Alertas y confirmaciones mediante SweetAlert2.
+- Arquitectura basada en componentes y servicios.
+- Comunicación mediante HttpClient.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+##  Estructura del proyecto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```text
+src/
+│
+├── app/
+│   ├── components/
+│   ├── interfaces/
+│   ├── models/
+│   ├── pages/
+│   ├── services/
+│   ├── shared/
+│   └── guards/
+│
+├── assets/
+├── environments/
+└── styles.css
+```
+
+---
+
+##  Integración
+
+El frontend consume una API desarrollada en ASP.NET Core encargada de:
+
+- Autenticación de usuarios.
+- Gestión de artículos.
+- Almacenamiento de información.
+- Gestión de imágenes mediante Cloudinary.
+
+---
+
+##  Gestión de imágenes
+
+Las imágenes son almacenadas en Cloudinary. La aplicación únicamente conserva la URL generada para mostrar la imagen cuando sea necesario.
+
+---
+
+##  Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/GabrielPerlaza/PortalFrontend.git
+```
+
+Ingresar al proyecto:
+
+```bash
+cd PortalFrontend
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+o
+
+```bash
+pnpm install
+```
+
+Ejecutar la aplicación:
+
+```bash
+ng serve
+```
+
+La aplicación estará disponible en:
+
+```
+http://localhost:4200
+```
+
+---
+
+##  Estado del proyecto
+
+Actualmente el proyecto cuenta con:
+
+- ✔ Autenticación de usuarios.
+- ✔ Administración de artículos.
+- ✔ Subida de imágenes.
+- ✔ Integración con API REST.
+- ✔ Diseño responsivo.
+
+Próximamente se incorporarán nuevas funcionalidades como gestión de categorías, etiquetas y mejoras en la experiencia de usuario.
+
+---
+
+##  Autor
+
+**Gabriel Sebastián Perlaza Mendoza**
+
+Desarrollador Full Stack especializado en el desarrollo de aplicaciones web utilizando Angular, ASP.NET Core, Entity Framework Core y PostgreSQL.
+
+GitHub:
+https://github.com/GabrielPerlaza
